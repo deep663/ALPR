@@ -88,7 +88,3 @@ for line in noPlates:
 #Display the detected Licence plate number
 cv2.imshow("Licence Plate No:", res)
 cv2.waitKey(0)
-
-butn = tk.Button(win,text='Exit', width=15, command=win.destroy)
-butn.pack()
-win.mainloop()
