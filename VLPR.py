@@ -2,16 +2,10 @@ import cv2
 import numpy as np
 import imutils
 import pytesseract
-import tkinter as tk
 
-win = tk.Tk()
-win.title("Licence plate Detection")
+path = [paths]
 
-
-path = [r'C:\Users\deeps\Desktop\vs_code\python\vehicaleLicensePlateDetection\test_items\dataset-card.jpg',
-        r'C:\Users\deeps\Desktop\vs_code\python\vehicaleLicensePlateDetection\test_items\numberplate.jpg']
-
-img = cv2.imread(path[0])
+img = cv2.imread(<path>[0])
 img = imutils.resize(img, width=600)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # cv2.imshow("Grayscale", gray)
@@ -84,12 +78,12 @@ res = cv2.putText(img, cleanup_text(lpText), org=(
 # print the licence plate Number
 print("[LICENCE PLATE INFO] {}".format(lpText))
 
-# noPlates = []
-# noPlates.append(lpText)
+noPlates = []
+noPlates.append(lpText)
 
-# file = open(r'C:\Users\deeps\Desktop\vs_code\python\vehicaleLicensePlateDetection\LicencePlaeNos.txt', 'a') 
-# for line in noPlates:  
-#     file.write(line) 
+file = open('<path>\LicencePlaeNos.txt', 'a') 
+for line in noPlates:  
+    file.write(line) 
 
 #Display the detected Licence plate number
 cv2.imshow("Licence Plate No:", res)
