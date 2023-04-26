@@ -3,9 +3,9 @@ import numpy as np
 import imutils
 import pytesseract
 
-path = [paths]
+path = [<paths of the images>]
 
-img = cv2.imread(<path>[0])
+img = cv2.imread(path[0])
 img = imutils.resize(img, width=600)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # cv2.imshow("Grayscale", gray)
